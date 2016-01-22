@@ -1,111 +1,71 @@
 *{
-	border: 0;
 	padding: 0;
 	margin: 0;
+	border: 0;
+	box-sizing: border-box;
 }
-body{
-	width: 100%;
-	height: 100%;
+body {
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
 }
-#bg{
-	position: absolute;
-	width: 100%;
-	height: 100%;
+
+.bg {
+	background-image: url('http://lansky-forum.stor.sinaapp.com/bg/5.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
 }
-#play_border{
-			position: absolute;
-			width: 73%;
-			height: 97.6%;
-			top: 1%;
-			left: 0.5%;
-			border-radius: 5px;
-			border: 2px solid #777;
-			box-shadow: 0px 0px 25px #777;
-		}
-		#play_border p{
-			text-align: center;
-		}
-		#lrc_border{
-			position: relative;
-			overflow: hidden;
-			padding: 10px;
-			width: 90%;
-			height: 80%;
-			top: 1%;
-			margin: 0 auto;
-			border-radius: 5px;
-			transition: 2s;
-		}
-		#lrc_border p{
-			position: relative;
-			text-align: center;
-			margin: 15px 2px 15px 2px;
-		}
-		#lrc_move{
-			position: relative;
-			margin: 0 auto;
-			width: 100%;
-			transition: 1s;
-			top: 100px;
-		}
-		#lrc_move p{
-			transition: 1s;
-			font-size: 20px;
-			font-family: "宋体";
-			text-shadow: 0px 0px 5px #555;
-		}
-		#button{
-			position: relative;
-			top: 30px;
-			height: 80px;
-		}
-		#button rowspan{
-			text-decoration: none;
-			display: inline-block;
-			transition: 2s;
-			cursor: pointer;
-			opacity: 0.3;
-			width: 70px;
-			height: 40px;
-			font-weight: bold;
-			font-size: 30px;
-			color: white;
-			text-shadow: 0 0 15px #333;
-		}
-		#button rowspan:hover{
-			transition: 2s;
-			opacity: 0.8;
-      		color: #ddd;
-		}
-#list{
-	position: absolute;
-	overflow: auto;
-	width: 25%;
-	height: 97.6%;
-	top: 1%;
-	right: 0.5%;
-	border-radius: 5px;
-	border: 2px solid #666;
-	box-shadow: 5px 5px 15px #666;
-}
-#list p{
-	font-size: 20px;
-	color: #222;
-	text-shadow: 2px 2px 5px #999;
-	padding-left: 10px;
-	cursor: pointer;
-	transition: 1s;
-}
-#list p:hover{
-	background-color: white;
-	opacity: 0.5;
-	transition: 0.15s;
-}
-#process_img{
-	position: absolute;
-	bottom: 0px;
-	width: 5%;
-	z-index: 999;
-	transition: 2s;
+ .play_border {
+ 	border: 3px solid #999;
+ 	border-radius: 8px;
+ 	margin: 4px 2px 2px;
+ 	flex-grow: 7;
+ 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+ }
+ .play_list {
+ 	flex-shrink: 0;
+ 	flex-grow: 3;
+ 	border-radius: 8px;
+ 	margin: 4px 2px 2px;
+ 	border: 3px solid #999;
+ 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+ }
+ .lrc_border {
+ 	flex-grow: 1;
+ }
+ .button {
+ 	text-align: center;
+ 	color: #fff;
+ 	font-weight: 800;
+ 	text-shadow: 1px 1px 6px black;
+ }
+ .button rowspan {
+ 	border: 1px solid;
+ 	display: inline-block;
+ 	margin-right: 20px;
+ 	font-size: 3vmin;
+ 	padding: 2px;
+ 	text-transform: uppercase;
+ 	line-height: 1.5em;
+	
+ 	border-radius: 5px;
+ }
+ .process_img {
+	width: 5vw;
+	position: relative;
+	left: 0vw;
+ }
+@media (min-width:1200px) {
+	.play_list {
+		flex-grow: 2;
+	}
+	.play_border {
+		flex-grow: 8;
+	}
 }
