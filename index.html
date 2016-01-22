@@ -1,0 +1,30 @@
+<!DOCTYPE HTML">
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>歌词播放器</title>
+	<script src="jquery-1.11.0.js"></script>
+	<script src="play.js"></script>
+	<link rel="stylesheet" type="text/css" href="play.css">
+</head>
+<body>
+	<img src="http://lansky-forum.stor.sinaapp.com/bg/5.jpg" id="bg">
+	<div id="play_border">
+		<p>
+			<audio src="mp3/冯绍峰 - 百年轮回.mp3" id="media" autoplay="autoplay" onclick="lrc_style_default()"></audio>
+		</p>
+		<div id="lrc_border">
+			<div id="lrc_move"></div>
+		</div>
+		<p id="button">
+			<rowspan onclick="play()" id="play">Play</rowspan>
+			<rowspan onclick="stop()">stop</rowspan>
+		</p>
+		<img src="http://lansky-forum.stor.sinaapp.com/bg/p1.gif" id="process_img" />
+	</div>
+	<div id="list">
+		
+	</div>
+
+</body>
+</html>
