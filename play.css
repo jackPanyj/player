@@ -61,6 +61,17 @@ body {
 	position: relative;
 	left: 0vw;
  }
+ .play_list span {
+ 	display: block;
+ 	padding: 10px;
+ 	margin: 5px 0;
+ 	border-radius: 4px;
+ 	background-color: rgba(0,0,0,0.1);
+ 	color: #fff;
+ 	font-weight: 500;
+ 	font-family: ubuntu mono, sans-serif;
+ 	border: 1px solid #EEEAB1;
+ }
 @media (min-width:1200px) {
 	.play_list {
 		flex-grow: 2;
