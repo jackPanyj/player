@@ -6,7 +6,6 @@ controls[0].addEventListener('click', play);
 controls[1].addEventListener('click', stop);
 spans[0].addEventListener('click', show_1);
 spans[1].addEventListener('click', show_2);
-controls[0].click();
 var timer = null;
 function play(){
 	audio.play();
@@ -18,7 +17,7 @@ function play(){
 		pic.style.left = audio.currentTime/song_time * play_border.getBoundingClientRect().width + 'px';
 	}, 200);
 }
-
+play();
 function stop(){
 	clearInterval(timer);
 	audio.pause();
@@ -26,7 +25,8 @@ function stop(){
 
 function show_1(){
 	audio.src = "http://m10.music.126.net/20170122232648/8f6e73677e7c71f57581d5377ee7e0c6/ymusic/1740/3891/913f/33532b549afe2ada4caf071d9ade35f4.mp3";
-}	controls[0].click();
+	controls[0].click();
+}	
 
 function show_2(){
 	audio.src='http://m10.music.126.net/20160122232648/8f6e73677e7c71f57581d5377ee7e0c6/ymusic/1740/3891/913f/33532b549afe2ada4caf071d9ade35f4.mp3';
